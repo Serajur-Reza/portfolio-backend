@@ -18,6 +18,8 @@ app.use(
       "https://portfolio-dashboard-rouge.vercel.app",
       "https://portfolio-ten-umber-39.vercel.app",
     ],
+
+    credentials: true,
   })
 );
 
