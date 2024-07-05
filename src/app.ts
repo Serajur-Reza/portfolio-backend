@@ -13,8 +13,11 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://assignment-6-kappa.vercel.app"],
-    credentials: true,
+    origin: [
+      "http://localhost:5173",
+      "https://portfolio-dashboard-rouge.vercel.app",
+      "https://portfolio-ten-umber-39.vercel.app",
+    ],
   })
 );
 

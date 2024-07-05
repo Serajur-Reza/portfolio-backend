@@ -7,14 +7,11 @@ const upsertSkillsService = async (body: any) => {
   if (!info) {
     result = await skills.create(body);
   } else {
-    const temp = await skills.findOne({ role: "owner" });
-
-    result = await skills.findOneAndUpdate({ role: "owner" }, body);
-    console.log("result ", temp);
+    result = await skills.findOneAndUpdate({ role: "owner" }, body, {
+      new: true,
+      upsert: true,
+    });
   }
-  // body, {
-  //     upsert: true,
-  //   }
 
   return result;
 };
